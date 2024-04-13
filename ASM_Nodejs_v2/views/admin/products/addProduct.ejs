@@ -1,0 +1,87 @@
+<%- include ('../layoutad/header.ejs') %>
+		
+    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <ul class="nav menu">
+            <li><a href="addcate"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg>Quản lý danh mục</a></li>
+            <li class="active"><a href="add"><svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>Quản lý sản phẩm</a></li>
+            <li><a href="..../index.html"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg>Về EduBook</a></li>
+        </ul>
+
+    </div>/.sidebar
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
+			<ol class="breadcrumb">
+                <li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+                <li><a href="">Quản lý sản phẩm</a></li>
+				<li class="active">Thêm sản phẩm</li>
+			</ol>
+		</div><!--/.row-->
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header">Thêm sản phẩm</h1>
+			</div>
+        </div><!--/.row-->
+        <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-md-6">
+                                <form role="form" method="post"  >
+                                    <div class="form-group">
+                                        <label>Tên sản phẩm</label>
+                                        <input required type="text" name="name" class="form-control" placeholder="">
+                                    </div>
+                                                                                
+                                    <div class="form-group">
+                                        <label>Giá sản phẩm</label>
+                                        <input required name="price" type="number" min="0" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Khuyến mãi</label>
+                                        <input required name="sale_price" type="number" min="0" class="form-control">
+                                    </div>    
+                            
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label>Mô tả sản phẩm</label>
+                                    <input required type="text" name="description" class="form-control" rows="3"></input>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Ảnh sản phẩm</label>
+                                    <input required name="image" type="file">
+                                    <br>
+                                  
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phân loại sản phẩm</label>
+                                    <select name="category_id" class="form-control" required>
+                                       <option value="1">1 - Truyện</option>
+                                       <option value="2">2 - Sách</option>
+                                       <option value="3">3 - Sách Giáo Khoa</option>
+                                       <option value="4">4 - Tập Viết</option>
+
+                                    </select>
+                                </div>
+                                
+                               
+                                <button name="sbm" type="submit" class="btn btn-success">Thêm mới</button>
+                                <button type="reset" class="btn btn-default">Làm mới</button>
+                            </div>
+                            </form>
+                            
+                        </form>
+                        </div>
+                    </div>
+                </div><!-- /.col-->
+            </div><!-- /.row -->
+		
+	</div>	<!--/.main-->	
+</body>
+
+<%- include ('../layoutad/footer.ejs') %>
